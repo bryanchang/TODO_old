@@ -1,25 +1,4 @@
 class TodoItemsController < ApplicationController
-  # GET /todo_items
-  # GET /todo_items.json
-  def index
-    @todo_items = TodoItem.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @todo_items }
-    end
-  end
-
-  # GET /todo_items/1
-  # GET /todo_items/1.json
-  def show
-    @todo_item = TodoItem.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @todo_item }
-    end
-  end
 
   # GET /todo_items/new
   # GET /todo_items/new.json
@@ -30,11 +9,6 @@ class TodoItemsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @todo_item }
     end
-  end
-
-  # GET /todo_items/1/edit
-  def edit
-    @todo_item = TodoItem.find(params[:id])
   end
 
   # POST /todo_items
