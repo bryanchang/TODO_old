@@ -46,3 +46,15 @@
   </li>
 <% end %>
 </ol>
+
+<h2>Completed Items</h2>
+
+<ol>
+<% @completed_items.each do |completed_item| %>
+  <li>
+    <span><%= completed_item.name %></span>
+    <span><%= completed_item.due_at %></span>
+    <span><%= link_to 'Destroy', completed_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+  </li>
+<% end %>
+</ol>
